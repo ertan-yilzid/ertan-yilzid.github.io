@@ -22,10 +22,7 @@ body{
 .bigbox {
     width: 80%;
     margin: 50px auto;
-    padding-top: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
     backdrop-filter: blur(10px) saturate(180%);
     background: rgba(20, 20, 30, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -62,7 +59,7 @@ body{
 }
 .rondodasosa{
     text-align: center;
-    font-size: 120px;
+    font-size: 140px;
     font-family: Bebas;
     margin: -10px;
     margin-bottom: -20px;
@@ -179,16 +176,16 @@ body{
 }
 
 .spotifyeachbox {
-    background: rgba(255, 255, 255, 0.05);   /* optional glassmorphism */
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 32px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;      /* ← this is the magic line */
+    justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 1px;            /* forces same height even if content is shorter */
+    min-height: 1px;
     border: 1px solid rgba(255,255,255,0.1);
     transition: transform 0.3s;
 }
@@ -218,9 +215,6 @@ body{
     color: white;
     line-height: 1.2;
 }
-
-
--------------------------------
 
 .serv{
     font-size: 1.5vw;
@@ -262,4 +256,97 @@ footer{
 .social{
     color: white;
     text-decoration: none;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #FFFFFF, transparent);
+}
+
+
+@media only screen and (max-width: 768px){
+    .rondodasosa{
+        text-align: center;
+        font-size: 65px;
+        font-family: Bebas;
+        margin: -10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin-bottom: -20px;
+        text-shadow:
+            0 0 150px rgb(8, 0, 255),
+            0 0 100px rgba(255, 255, 255, 0.37);
+    }
+    .spotifymidtext {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .slider {
+        width: 100%;
+        max-height: 200px;
+        max-width: 1000px;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 12px;
+    }
+
+    .slides {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+        animation: slide 16s linear infinite;
+    }
+
+    .bigbox{
+        width: 80%;
+        margin: 50px auto;
+        padding: 30px;
+        backdrop-filter: blur(10px) saturate(180%);
+        background: rgba(20, 20, 30, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.57);
+    }
+
+    .photo {
+        flex: 0 0 calc(25% - 7.5px);
+        max-width: 100px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .latestmidtext{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        gap: 20px;
+        align-items: stretch;
+    }
+    .spotifydata {
+        font-size: 30px;
+        font-weight: 800;
+        color: white;
+        line-height: 1.2;
+    }
+    .logo{
+        max-width: 300%;
+        height: auto;
+        filter: brightness(0) invert(1);
+    }
+
+    .aboutsection{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        align-items: center;
+        text-align: right;
+        font-weight: 650;
+        font-size: 2.5vw;
+        gap: 10px;
+    }
+
 }
